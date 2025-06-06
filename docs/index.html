@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futura Digital — Next-Gen Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at top left, #111 0%, #000 100%);
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      overflow: hidden;
+    }
+
+    .hero-content {
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff5f6d, #ffc371);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.2s ease-out forwards;
+    }
+
+    .cta-button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: #ff5f6d;
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-animation {
+      width: 400px;
+      z-index: 2;
+    }
+
+    .bg-blur {
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,95,109,0.3), transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(20px); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-animation {
+        margin-top: 2rem;
+        width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="bg-blur"></div>
+  <div class="hero-content">
+    <h1>Bold Ideas. Brilliant Experiences.</h1>
+    <p>We turn ambitious concepts into stunning digital realities — through design, technology, and storytelling.</p>
+    <button class="cta-button" onclick="location.href='#contact'">Start a Project</button>
+  </div>
+  <div class="hero-animation">
+    <lottie-player 
+      src="https://assets1.lottiefiles.com/packages/lf20_hbr24nps.json"  
+      background="transparent"  
+      speed="1"  
+      loop  
+      autoplay>
+    </lottie-player>
+  </div>
+</section>
+<!-- Services Section -->
+<section id="services" style="padding: 6rem 2rem; background: #121212; text-align: center;">
+  <h2 style="font-size: 2.5rem; background: linear-gradient(90deg, #ff5f6d, #ffc371); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">What We Do</h2>
+  <div style="max-width: 1000px; margin: 3rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+    <div style="background: #1e1e1e; padding: 2rem; border-radius: 20px;">
+      <h3>🎨 UI/UX</h3>
+      <p style="color: #bbb;">Beautiful, functional interfaces that keep users engaged and delighted.</p>
+    </div>
+    <div style="background: #1e1e1e; padding: 2rem; border-radius: 20px;">
+      <h3>⚡ Web Apps</h3>
+      <p style="color: #bbb;">Robust, scalable applications built for speed and reliability.</p>
+    </div>
+    <div style="background: #1e1e1e; padding: 2rem; border-radius: 20px;">
+      <h3>📱 Mobile</h3>
+      <p style="color: #bbb;">Native & cross-platform apps with fluid mobile-first UX.</p>
+    </div>
+    <div style="background: #1e1e1e; padding: 2rem; border-radius: 20px;">
+      <h3>🤖 AI/Automation</h3>
+      <p style="color: #bbb;">Next-gen solutions with intelligent automation, AI models, and real-time insights.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" style="padding: 6rem 2rem; background: #181818;">
+  <h2 style="text-align: center; font-size: 2.5rem; background: linear-gradient(90deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Our Work</h2>
+  <div style="display: grid; max-width: 1000px; margin: 3rem auto; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div style="background: #222; padding: 2rem; border-radius: 16px;">
+      <h3>🏦 FinanceFlow</h3>
+      <p style="color: #aaa;">AI-powered personal finance app with predictive insights and budgeting automation.</p>
+    </div>
+    <div style="background: #222; padding: 2rem; border-radius: 16px;">
+      <h3>🛍️ ShopSphere</h3>
+      <p style="color: #aaa;">Immersive AR ecommerce storefront with smart cart AI and visual personalization.</p>
+    </div>
+    <div style="background: #222; padding: 2rem; border-radius: 16px;">
+      <h3>🎓 EduNova</h3>
+      <p style="color: #aaa;">Gamified LMS platform with dynamic student dashboards and adaptive quizzes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Footer -->
+<footer id="contact" style="padding: 5rem 2rem; background: #0a0a0a; color: #ccc; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">Let’s Collaborate</h2>
+  <p>Drop us a message. Let's create something breathtaking together.</p>
+  <a href="mailto:hello@futuradigital.com" style="display: inline-block; margin-top: 2rem; padding: 1rem 2rem; background: #ffc371; color: #000; border-radius: 40px; font-weight: bold; text-decoration: none;">Email Us</a>
+  <p style="margin-top: 4rem; font-size: 0.9rem;">© 2025 Futura Digital Template. Designed with precision and passion by WorldSoColed Web Artistry.</p>
+</footer>
+
+</body>
+</html>
